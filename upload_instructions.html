@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>上传到GitHub仓库 blog0329</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        
+        .container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        h1, h2 {
+            color: #3498db;
+        }
+        
+        .section {
+            margin-bottom: 30px;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+        }
+        
+        .code {
+            background-color: #e8f4fd;
+            padding: 15px;
+            border-radius: 5px;
+            font-family: monospace;
+            overflow: auto;
+        }
+        
+        .download-box {
+            background-color: #d4edda;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+        }
+        
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #3498db;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            margin: 5px;
+        }
+        
+        .button:hover {
+            background-color: #2980b9;
+        }
+        
+        .warning {
+            background-color: #fff3cd;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>博客网站上传指南</h1>
+        
+        <div class="download-box">
+            <h2>📁 文件包下载位置</h2>
+            <p>博客网站文件位于:</p>
+            <div class="code">
+                /root/.openclaw/workspace/blog-github-pages
+            </div>
+            
+            <h2>📦 压缩包</h2>
+            <div class="code">
+                blog-github-pages.tar.gz  (完整静态博客网站)
+                blog0329.tar.gz           (带权限管理的完整系统)
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>📋 上传步骤</h2>
+            
+            <h3>步骤1: 进入GitHub仓库</h3>
+            <p>访问: <a href="https://github.com/ndlinhc/blog0329" target="_blank">https://github.com/ndlinhc/blog0329</a></p>
+            
+            <h3>步骤2: 上传文件</h3>
+            <p>在仓库页面:</p>
+            <ol>
+                <li>点击右上角的 "Add file" 按钮</li>
+                <li>选择 "Upload files"</li>
+                <li>选择 blog-github-pages 文件夹中的所有文件</li>
+                <li>点击 "Commit changes"</li>
+            </ol>
+            
+            <div class="warning">
+                <strong>重要:</strong> GitHub Pages只支持静态文件。上传带权限管理的博客系统需要使用其他平台（Vercel/Heroku）。
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>🌐 GitHub Pages配置</h2>
+            
+            <h3>步骤3: 配置GitHub Pages</h3>
+            <ol>
+                <li>在仓库页面点击 "Settings"</li>
+                <li>左侧找到 "Pages"</li>
+                <li>在 "Source" 部分，选择 "Deploy from a branch"</li>
+                <li>选择分支: "main"</li>
+                <li>选择文件夹: "/" (根目录)</li>
+                <li>点击 "Save"</li>
+            </ol>
+            
+            <div class="code">
+                GitHub Pages将在几分钟内自动部署
+                <br>访问地址: https://ndlinhc.github.io/blog0329
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>🚀 测试网站</h2>
+            
+            <p>上传完成后:</p>
+            <ol>
+                <li>等待几分钟</li>
+                <li>访问: <a href="https://ndlinhc.github.io/blog0329" target="_blank">https://ndlinhc.github.io/blog0329</a></li>
+                <li>如果看到博客首页，说明部署成功</li>
+            </ol>
+            
+            <p>如果需要，你可以下载压缩包:</p>
+            <div class="code">
+                # 下载静态博客网站
+                blog-github-pages.tar.gz
+                
+                # 下载完整博客系统
+                blog0329.tar.gz
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>📝 文件清单</h2>
+            
+            <p>需要上传的文件:</p>
+            <div class="code">
+                index.html
+                about.html
+                contact.html
+                deploy.html
+                upload_instructions.html
+                GITHUB_PAGES_SETUP.md
+                README.md
+                .gitignore
+                css/style.css
+                css/responsive.css
+                css/blog.css
+                js/main.js
+                js/blog.js
+                js/contact.js
+                blog/post1.html
+                blog/post2.html
+                blog/post3.html
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>🆘 技术支持</h2>
+            
+            <p>如果遇到问题:</p>
+            <ul>
+                <li>确保所有文件都已上传</li>
+                <li>检查index.html是否在根目录</li>
+                <li>等待GitHub Pages部署完成（可能需要几分钟）</li>
+                <li>检查GitHub Pages状态</li>
+            </ul>
+            
+            <p>GitHub Pages文档: <a href="https://docs.github.com/en/pages" target="_blank">https://docs.github.com/en/pages</a></p>
+        </div>
+    </div>
+</body>
+</html>
