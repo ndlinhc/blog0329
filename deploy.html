@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>博客网站 GitHub Pages 部署指南</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .deploy-guide {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .step {
+            background-color: white;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .step h3 {
+            color: #3498db;
+            margin-bottom: 15px;
+        }
+        
+        .command {
+            background-color: #f5f5f5;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 10px 0;
+            font-family: monospace;
+        }
+        
+        .note {
+            background-color: #ffeaa7;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 15px 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>博客网站 GitHub Pages 部署指南</h1>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="deploy-guide">
+            <h2>如何将博客网站部署到 GitHub Pages</h2>
+            
+            <div class="step">
+                <h3>步骤1: 创建GitHub仓库</h3>
+                <p>访问 https://github.com 并登录你的GitHub账号</p>
+                <ol>
+                    <li>点击右上角的 "+" 按钮，选择 "New repository"</li>
+                    <li>输入仓库名称，例如: <strong>my-blog-site</strong></li>
+                    <li>设置为公共仓库 (Public)</li>
+                    <li>点击 "Create repository"</li>
+                </ol>
+                <div class="note">
+                    <strong>注意:</strong> 仓库名称将决定你的网站地址。例如：my-blog-site 的访问地址将是 https://yourusername.github.io/my-blog-site
+                </div>
+            </div>
+            
+            <div class="step">
+                <h3>步骤2: 上传博客网站代码</3>
+                <p>你可以选择以下两种方式上传代码:</p>
+                
+                <h4>方式A: 使用Git命令行</h4>
+                <div class="command">
+                    <p>git init</p>
+                    <p>git add .</p>
+                    <p>git commit -m "Initial commit"</p>
+                    <p>git remote add origin https://github.com/yourusername/myrepository.git</p>
+                    <p>git push -u origin main</p>
+                </div>
+                
+                <h4>方式B: 使用GitHub Web界面</h4>
+                <ol>
+                    <li>在GitHub仓库页面，点击 "Add file" > "Upload files"</li>
+                    <li>上传博客网站文件夹中的所有文件</li>
+                    <li>点击 "Commit changes"</li>
+                </ol>
+            </div>
+            
+            <div class="step">
+                <h3>步骤3: 配置GitHub Pages</h3>
+                <ol>
+                    <li>在GitHub仓库页面，点击 "Settings"</li>
+                    <li>左侧菜单中找到 "Pages"</li>
+                    <li>在 "Source" 部分，选择 "Deploy from a branch"</li>
+                    <li>选择分支 "main" 或 "master"</li>
+                    <li>选择根目录 (root)</li>
+                    <li>点击 "Save"</li>
+                </ol>
+                <div class="note">
+                    <strong>提示:</strong> GitHub Pages将在几分钟后部署完成。你将获得一个免费的网站地址：https://yourusername.github.io/repositoryname
+                </div>
+            </div>
+            
+            <div class="step">
+                <h3>步骤4: 验证部署</3>
+                <ol>
+                    <li>等待1-2分钟让GitHub完成部署</li>
+                    <li>访问 https://yourusername.github.io/myrepository</li>
+                    <li>你应该能看到博客网站的首页</li>
+                </ol>
+            </div>
+            
+            <div class="step">
+                <h3>自定义域名</h3>
+                <p>如果需要自定义域名:</p>
+                <ol>
+                    <li>在GitHub Pages设置页面，添加你的自定义域名</li>
+                    <li>在你的DNS提供商处配置CNAME记录指向 <strong>yourusername.github.io</strong></li>
+                    <li>等待DNS传播（可能需要几分钟到几小时）</li>
+                </ol>
+            </div>
+            
+            <div class="step">
+                <h3>GitHub Pages的优点</h3>
+                <ul>
+                    <li><strong>免费</strong>: GitHub Pages完全免费</li>
+                    <li><strong>自动部署</strong>: 每次推送代码都会自动更新网站</li>
+                    <li><strong>SSL证书</strong>: 自动提供HTTPS支持</li>
+                    <li><strong>CDN</strong>: 全球内容分发网络，访问速度快</li>
+                    <li><strong>简单配置</strong>: 只需要几分钟就能完成设置</li>
+                </ul>
+            </div>
+            
+            <div class="step">
+                <h3>注意事项</3>
+                <ul>
+                    <li>GitHub Pages只支持静态网站（HTML/CSS/JavaScript）</li>
+                    <li>不支持服务器端代码（PHP、Node.js等）</li>
+                    <li>文件大小限制：单个文件最大100MB</li>
+                    <li>网站流量限制：每月限制为100GB</li>
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>博客网站部署指南 © 2024 - 这是一个静态博客网站，适合部署到GitHub Pages</p>
+            <p>访问示例博客: <a href="index.html">博客首页</a></p>
+        </div>
+    </footer>
+</body>
+</html>
