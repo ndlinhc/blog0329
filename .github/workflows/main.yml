@@ -1,0 +1,25 @@
+name: Deploy Static Site
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v2
+    
+    - name: Display files
+      run: |
+        echo "Uploaded files:"
+        ls -la
+        echo "CSS files:"
+        ls -la css/
+        echo "JS files:"
+        ls -la js/
+        echo "Blog posts:"
+        ls -la blog/
+        
+    - name: Setup GitHub Pages
+      run: |
+        echo "This is a static website for GitHub Pages"
