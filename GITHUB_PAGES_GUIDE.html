@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>博客网站 GitHub Pages 部署指南</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .guide {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        h1, h2, h3 {
+            color: #3498db;
+        }
+        
+        .step {
+            margin-bottom: 30px;
+            padding: 20px;
+            background-color: #f5f5f5;
+            border-radius: 8px;
+        }
+        
+        .download-links {
+            background-color: #e8f4fd;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+        }
+        
+        .download-links h2 {
+            color: #2980b9;
+        }
+        
+        .download-link {
+            display: block;
+            margin: 10px 0;
+            padding: 10px;
+            background-color: #3498db;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            text-align: center;
+        }
+        
+        .download-link:hover {
+            background-color: #2980b9;
+        }
+        
+        .code-block {
+            background-color: #f8f9fa;
+            padding: 15px;
+            border-radius: 5px;
+            font-family: monospace;
+            overflow: auto;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>博客网站 GitHub Pages 部署指南</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">返回博客首页</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="guide">
+            <h2>如何将博客网站部署到 GitHub Pages</h2>
+            <p>GitHub Pages 是免费的静态网站托管服务，非常适合博客网站。</p>
+            
+            <div class="download-links">
+                <h3>下载博客网站文件</h3>
+                <p>你可以下载以下文件包进行上传：</p>
+                <ul>
+                    <li><strong>blog-github-pages.tar.gz</strong> - 静态博客网站完整包</li>
+                    <li><strong>blog0329.tar.gz</strong> - 带权限管理的完整博客系统</li>
+                </ul>
+            </div>
+            
+            <div class="step">
+                <h3>步骤1: 访问GitHub</h3>
+                <p>登录 GitHub: https://github.com</p>
+                <p>导航到你的仓库: <strong>ndlinhc/blog0329</strong></p>
+            </div>
+            
+            <div class="step">
+                <h3>步骤2: 上传文件</h3>
+                <p>在仓库页面:</p>
+                <ol>
+                    <li>点击 "Add file" → "Upload files"</li>
+                    <li>选择要上传的文件</li>
+                    <li>点击 "Commit changes"</li>
+                </ol>
+                
+                <p>你需要上传的文件:</p>
+                <ul>
+                    <li>index.html</li>
+                    <li>about.html</li>
+                    <li>contact.html</li>
+                    <li>deploy.html</li>
+                    <li>README.md</li>
+                    <li>css/目录下的所有.css文件</li>
+                    <li>js/目录下的所有.js文件</li>
+                    <li>blog/目录下的所有.html文件</li>
+                </ul>
+            </div>
+            
+            <div class="step">
+                <h3>步骤3: 配置GitHub Pages</h3>
+                <ol>
+                    <li>点击 "Settings"</li>
+                    <li>左侧找到 "Pages"</li>
+                    <li>在 "Source" 部分，选择 "Deploy from a branch"</li>
+                    <li>选择分支 "main"</li>
+                    <li>选择文件夹 "/" (根目录)</li>
+                    <li>点击 "Save"</li>
+                </ol>
+                
+                <div class="code-block">
+                    GitHub Pages将在几分钟内自动部署你的网站
+                    <br>访问地址: https://ndlinhc.github.io/blog0329
+                </div>
+            </div>
+            
+            <div class="step">
+                <h3>步骤4: 验证部署</h3>
+                <p>等待大约5分钟后:</p>
+                <ol>
+                    <li>访问 https://ndlinhc.github.io/blog0329</li>
+                    <li>如果看到博客首页，说明部署成功</li>
+                    <li>如果未显示，可能需要更多时间</li>
+                </ol>
+                
+                <p>常见问题:</p>
+                <ul>
+                    <li>确保 index.html 文件在根目录</li>
+                    <li>确保所有CSS和JS文件路径正确</li>
+                    <li>如果部署失败，检查文件结构是否正确</li>
+                </ul>
+            </div>
+            
+            <div class="step">
+                <h3>GitHub Pages的优点</h3>
+                <ul>
+                    <li><strong>免费</strong>: GitHub Pages完全免费</li>
+                    <li><strong>自动部署</strong>: 每次推送代码都会自动更新</li>
+                    <li><strong>SSL证书</strong>: 自动提供HTTPS加密</li>
+                    <li><strong>CDN</strong>: 全球内容分发网络，访问速度快</li>
+                    <li><strong>简单配置</strong>: 只需要几分钟即可完成设置</li>
+                </ul>
+            </div>
+            
+            <div class="step">
+                <h3>注意事项</h3>
+                <ul>
+                    <li>GitHub Pages只支持静态网站（HTML/CSS/JavaScript）</li>
+                    <li>不支持服务器端代码（PHP、Node.js等）</li>
+                    <li>单个文件最大100MB</li>
+                    <li>每月流量限制100GB</li>
+                </ul>
+            </div>
+            
+            <div class="step">
+                <h3>备用部署方案</h3>
+                <p>如果需要部署带权限管理的完整博客系统（包含Node.js后端），请使用:</p>
+                <ul>
+                    <li><strong>Vercel</strong>: https://vercel.com</li>
+                    <li><strong>Heroku</strong>: https://heroku.com</li>
+                    <li><strong>Netlify</strong>: https://netlify.com</li>
+                </ul>
+                <p>下载 blog0329.tar.gz 包含完整项目。</p>
+            </div>
+            
+            <div class="download-links">
+                <h3>立即开始部署</h3>
+                <p>你现在可以:</p>
+                <ol>
+                    <li>下载 blog-github-pages.tar.gz</li>
+                    <li>解压缩文件</li>
+                    <li>上传到 GitHub 仓库 blog0329</li>
+                    <li>配置 GitHub Pages</li>
+                </ol>
+                
+                <p>开始部署后，访问:</p>
+                <div class="code-block">
+                    https://ndlinhc.github.io/blog0329
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>博客网站部署指南 © 2024 - GitHub Pages部署说明</p>
+            <p>访问示例博客: <a href="index.html">博客首页</a></p>
+        </div>
+    </footer>
+</body>
+</html>
